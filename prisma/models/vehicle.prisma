@@ -1,0 +1,16 @@
+model Vehicle {
+    id String @id @default(cuid())
+    type VehicleType @default(OTHER)
+    brand String 
+    model String
+    year Int
+    vin String @unique
+    licensePlate String @unique
+    mileage Int
+    hp Int
+    color String?
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+
+    @@map("vehicles")
+}

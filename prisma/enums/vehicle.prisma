@@ -1,0 +1,11 @@
+enum VehicleType {
+    SEDAN
+    SUV
+    TRUCK
+    COUPE
+    CONVERTIBLE
+    VAN
+    WAGON
+    MOTORCYCLE
+    OTHER
+}
