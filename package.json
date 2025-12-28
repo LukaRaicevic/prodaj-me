@@ -6,11 +6,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "prisma:generate-schema": "node ./scripts/generate-prisma-schema.js",
+    "prisma:migrate-create-only": "pnpm run prisma:generate-schema && pnpm exec prisma migrate dev --create-only --name",
+    "prisma:migrate-dev": "pnpm run prisma:generate-schema && pnpm exec prisma migrate dev --name"
   },
   "dependencies": {
     "@prisma/adapter-pg": "^7.1.0",
     "@prisma/client": "^7.1.0",
+    "@stackframe/stack": "^2.8.56",
     "dotenv": "^17.2.3",
     "next": "16.0.8",
     "react": "19.2.1",
